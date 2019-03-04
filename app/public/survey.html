@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Friend Finder survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  </head>
+  <body>
+    <!-- <script>$(document).ready(function($) {
+            $("#div").on("click", "a", function(event) {
+              event.preventDefault();
+              jQuery.noConflict();
+              $('#myModal').modal('show');
+          
+            });
+          });</script> -->
+    <h1><i class="fas fa-person-booth"></i> Friend Finder</h1>
+    <hr />
+    <div class="blob">
+      <div class="quizFields">
+        <label for="name">Your name:</label>
+        <input placeholder="First name and Last name" id="name" />
+      </div>
+
+      <div class="quizFields">
+        <label for="photo">Link to photo:</label>
+        <input placeholder="paste URL here" id="photo" />
+      </div>
+
+      <p>How do you feel about...</p>
+      <div class="quizFields">
+        <label for="zeroth">Sushi?</label>
+        <select id="zeroth">
+          <option value="" selected disabled hidden>Click here to choose</option
+          ><option> </option
+          ><option value="1">Strongly opposed</option>
+          <option value="2">Opposed</option>
+          <option value="3">Indifferent</option>
+          <option value="4">Supportive</option>
+          <option value="5">Strongly supportive</option>
+        </select>
+      </div>
+
+      <div class="quizFields">
+        <label for="oneth">Being considered a geek or nerd?</label>
+        <select id="oneth">
+          <option value="" selected disabled hidden>Click here to choose</option
+          ><option> </option
+          ><option value="1">Strongly opposed</option>
+          <option value="2">Opposed</option>
+          <option value="3">Indifferent</option>
+          <option value="4">Supportive</option>
+          <option value="5">Strongly supportive</option>
+        </select>
+      </div>
+
+      <div class="quizFields">
+        <label for="twoth">The new Star Wars movies?</label>
+        <select id="twoth">
+          <option value="" selected disabled hidden>Click here to choose</option
+          ><option> </option
+          ><option value="1">Strongly opposed</option>
+          <option value="2">Opposed</option>
+          <option value="3">Indifferent</option>
+          <option value="4">Supportive</option>
+          <option value="5">Strongly supportive</option>
+        </select>
+      </div>
+
+      <div class="quizFields">
+        <label for="threeth">President Donald Trump?</label>
+        <select id="threeth">
+          <option value="" selected disabled hidden>Click here to choose</option
+          ><option> </option
+          ><option value="1">Strongly opposed</option>
+          <option value="2">Opposed</option>
+          <option value="3">Indifferent</option>
+          <option value="4">Supportive</option>
+          <option value="5">Strongly supportive</option>
+        </select>
+      </div>
+
+      <div class="quizFields">
+        <label for="fourth">Religion?</label>
+        <select id="fourth">
+          <option value="" selected disabled hidden>Click here to choose</option
+          ><option> </option
+          ><option value="1">Strongly opposed</option>
+          <option value="2">Opposed</option>
+          <option value="3">Indifferent</option>
+          <option value="4">Supportive</option>
+          <option value="5">Strongly supportive</option>
+        </select>
+      </div>
+
+      <div class="quizFields">
+        <label for="fiveth">Dogs?</label>
+        <select id="fiveth">
+          <option value="" selected disabled hidden>Click here to choose</option
+          ><option> </option
+          ><option value="1">Strongly opposed</option>
+          <option value="2">Opposed</option>
+          <option value="3">Indifferent</option>
+          <option value="4">Supportive</option>
+          <option value="5">Strongly supportive</option>
+        </select>
+      </div>
+
+      <div class="quizFields">
+        <label for="sixth">Cats?</label>
+        <select id="sixth">
+          <option value="" selected disabled hidden>Click here to choose</option
+          ><option> </option
+          ><option value="1">Strongly opposed</option>
+          <option value="2">Opposed</option>
+          <option value="3">Indifferent</option>
+          <option value="4">Supportive</option>
+          <option value="5">Strongly supportive</option>
+        </select>
+      </div>
+
+      <div class="quizFields">
+        <label for="seventh">Law Enforcement personnel?</label>
+        <select id="seventh">
+          <option value="" selected disabled hidden>Click here to choose</option
+          ><option> </option
+          ><option value="1">Strongly opposed</option>
+          <option value="2">Opposed</option>
+          <option value="3">Indifferent</option>
+          <option value="4">Supportive</option>
+          <option value="5">Strongly supportive</option>
+        </select>
+      </div>
+
+      <div class="quizFields">
+        <label for="eightth">Dr. Who?</label>
+        <select id="eightth">
+          <option value="" selected disabled hidden>Click here to choose</option
+          ><option> </option
+          ><option value="1">Strongly opposed</option>
+          <option value="2">Opposed</option>
+          <option value="3">Indifferent</option>
+          <option value="4">Supportive</option>
+          <option value="5">Strongly supportive</option>
+        </select>
+      </div>
+
+      <div class="quizFields">
+        <label for="nineth">Taco Bell?</label>
+        <select id="nineth">
+          <option value="" selected disabled hidden>Click here to choose</option
+          ><option> </option
+          ><option value="1">Strongly opposed</option>
+          <option value="2">Opposed</option>
+          <option value="3">Indifferent</option>
+          <option value="4">Supportive</option>
+          <option value="5">Strongly supportive</option>
+        </select>
+      </div>
+
+      <button
+        type="submit"
+        id="survey"
+        data-toggle="modal"
+        data-target="#myModal"
+      >
+        <h2>Submit survey</h2>
+      </button>
+    </div>
+    <p>
+      <a href="/api/friends">API Friends List</a> |
+      <a href="https://github.com/bsessio/Friendfinder">GitHub Repo</a>
+    </p>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- <script src="server.js"></script> -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h4 class="modal-title">Your New Best Friend</h4>
+          </div>
+          <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img id ="match-img" src="match-img" alt="match image" max-width="75%" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      {
+        $("#survey").on("click", function(event) {
+          event.preventDefault();
+          // console.log(friends)
+          var iFriend = {
+            friendName: $("#name")
+              .val()
+              .trim(),
+            photoURL: $("#photo")
+              .val()
+              .trim(),
+            scores: [
+              parseFloat(
+                $("#zeroth")
+                  .val()
+                  .trim()
+              ),
+              parseFloat(
+                $("#oneth")
+                  .val()
+                  .trim()
+              ),
+              parseFloat(
+                $("#twoth")
+                  .val()
+                  .trim()
+              ),
+              parseFloat(
+                $("#threeth")
+                  .val()
+                  .trim()
+              ),
+              parseFloat(
+                $("#fourth")
+                  .val()
+                  .trim()
+              ),
+              parseFloat(
+                $("#fiveth")
+                  .val()
+                  .trim()
+              ),
+              parseFloat(
+                $("#sixth")
+                  .val()
+                  .trim()
+              ),
+              parseFloat(
+                $("#seventh")
+                  .val()
+                  .trim()
+              ),
+              parseFloat(
+                $("#eightth")
+                  .val()
+                  .trim()
+              ),
+              parseFloat(
+                $("#nineth")
+                  .val()
+                  .trim()
+              )
+            ]
+          };
+          var self = iFriend.friendName;
+          $.post("/api/friends", iFriend, function(data) {
+            console.log(data);
+          })
+            // .then(function(data) {
+            //   $.get("/api/friends", function(req, res) {
+            //     return res.json(friends);
+            //   });
+            // });
+            .then(function(data) {
+              $("#match-name").text(data.friendName);
+              $("#match-img").attr("src", data.photoURL);
+
+              $("#myModal").modal("toggle");
+              // THIS ISN'T WORKING ^^^^
+
+              // use data to manipulate
+            });
+
+          // pop up modal showing name and image of matched object
+          // });
+        });
+      }
+    </script>
+  </body>
+</html>
