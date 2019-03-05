@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Friend Finder</title>
+    <title>Brooklyn 99 Friend Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Stylesheets woooooo -->
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link
       rel="stylesheet"
@@ -14,20 +15,25 @@
     />
   </head>
   <body>
+    <!-- Main content div -->
     <div class="blob">
-            <h1 class="center"><i class="fas fa-person-booth"></i> Friend Finder</h1>
-            <hr />
-              <div class="intro">
+      <!-- Logo and Header, with our 'friend finder' logo from FontAwesome -->
+      <img src="b99logo.png" width="100%" />
+      <h1 class="center">
+        <i class="fas fa-person-booth"></i> Brooklyn 99 Friend Finder
+      </h1>
+      <!-- Shapes up our content a little better. -->
+      <div class="intro">
         <h3>Answer a few basic questions.</h3>
-        <h3>Then find a new best friend!</h3>
+        <h4>Then find a new best friend!</h4>
       </div>
+      <!-- Survey button! Away! -->
       <a href="/survey"><button id="survey">Begin Survey</button></a>
+      <!-- API we use for Friends, and the GitHub Repo for the project. -->
       <p class="center">
-            <a href="/api/friends">API Friends List</a> |
-            <a href="https://github.com/bsessio/Friendfinder">GitHub Repo</a>
-          </p>
-          </div>
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- <script src="server.js"></script> -->
+        <a href="/api/friends">API Friends List</a> |
+        <a href="https://github.com/bsessio/Friendfinder">GitHub Repo</a>
+      </p>
+    </div>
   </body>
 </html>

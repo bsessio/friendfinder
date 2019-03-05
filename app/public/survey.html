@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Friend Finder Survey</title>
+    <title>Brooklyn 99 Friend Finder Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Stylesheets -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -19,10 +20,15 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
   <body>
+    <!-- Main container on the page, gives us a classy background. -->
     <div class="blob">
-        <h1 class="center"><i class="fas fa-person-booth"></i> Friend Finder</h1>
-        <hr />
-          <div class="quizFields">
+      <!-- Logo and Header, with our 'friend finder' logo from FontAwesome -->
+      <img src="b99logo.png" width="100%" />
+      <h1 class="center">
+        <i class="fas fa-person-booth"></i> Brooklyn 99 Friend Finder
+      </h1>
+      <!-- Quiz Fields are the boxes for each of the details entered into our json we'll be manipulating -->
+      <div class="quizFields">
         <label for="name">Your name:</label>
         <input placeholder="First name and Last name" id="name" />
       </div>
@@ -32,10 +38,14 @@
         <input placeholder="paste URL here" id="photo" />
       </div>
 
+      <!-- newPage just helps set a visible break in the page. -->
       <p class="newPage">How do you feel about...</p>
       <div class="quizFields">
+        <!-- https://www.youtube.com/watch?v=16Jd-ceVuUM -->
         <label for="zeroth">Sushi?</label>
+        <!-- I named the IDs for the array position, which gets REAL obnoxious with words like 'eightth' and 'fiveth'. -->
         <select id="zeroth">
+          <!-- Each of these has a secret fake entry that asks for the user to choose. -->
           <option value="" selected disabled hidden>Click here to choose</option
           ><option value="1">Strongly opposed</option>
           <option value="2">Opposed</option>
@@ -46,6 +56,7 @@
       </div>
 
       <div class="quizFields">
+        <!-- https://www.youtube.com/watch?v=2Tvy_Pbe5NA -->
         <label for="oneth">Geekiness?</label>
         <select id="oneth">
           <option value="" selected disabled hidden>Click here to choose</option
@@ -58,6 +69,7 @@
       </div>
 
       <div class="quizFields">
+        <!-- https://www.youtube.com/watch?v=n-ttzaEWPx4&feature=youtu.be&t=11 -->
         <label for="twoth">New Star Wars?</label>
         <select id="twoth">
           <option value="" selected disabled hidden>Click here to choose</option
@@ -70,6 +82,7 @@
       </div>
 
       <div class="quizFields">
+        <!-- https://www.youtube.com/watch?v=u_aLESDql1U -->
         <label for="threeth">Donald Trump?</label>
         <select id="threeth">
           <option value="" selected disabled hidden>Click here to choose</option
@@ -82,6 +95,7 @@
       </div>
 
       <div class="quizFields">
+        <!-- https://youtu.be/5G5XzQN_SDM?t=16 -->
         <label for="fourth">Religion?</label>
         <select id="fourth">
           <option value="" selected disabled hidden>Click here to choose</option
@@ -94,6 +108,7 @@
       </div>
 
       <div class="quizFields">
+        <!-- https://www.youtube.com/watch?v=AcL0MeVZIxM -->
         <label for="fiveth">Dogs?</label>
         <select id="fiveth">
           <option value="" selected disabled hidden>Click here to choose</option
@@ -106,6 +121,7 @@
       </div>
 
       <div class="quizFields">
+        <!-- https://www.youtube.com/watch?v=WEkSYw3o5is -->
         <label for="sixth">Cats?</label>
         <select id="sixth">
           <option value="" selected disabled hidden>Click here to choose</option
@@ -118,6 +134,7 @@
       </div>
 
       <div class="quizFields">
+        <!-- https://www.youtube.com/watch?v=xyOcCxvYc48 -->
         <label for="seventh">Cops?</label>
         <select id="seventh">
           <option value="" selected disabled hidden>Click here to choose</option
@@ -130,6 +147,7 @@
       </div>
 
       <div class="quizFields">
+        <!-- https://www.youtube.com/watch?v=-2swVic8KxY -->
         <label for="eightth">Dr. Who?</label>
         <select id="eightth">
           <option value="" selected disabled hidden>Click here to choose</option
@@ -142,6 +160,7 @@
       </div>
 
       <div class="quizFields">
+        <!-- https://www.youtube.com/watch?v=evUWersr7pc -->
         <label for="nineth">Taco Bell?</label>
         <select id="nineth">
           <option value="" selected disabled hidden>Click here to choose</option
@@ -154,29 +173,36 @@
       </div>
 
       <div class="newPage">
+        <!-- Submit button, which has some integration for the Modal and is handled by the clickhandler below. -->
         <button type="submit" id="survey" data-target="#myModal">
           SUBMIT SURVEY
         </button>
       </div>
+
+      <!-- API we use for Friends, and the GitHub Repo for the project. -->
       <p class="center">
-          <a href="/api/friends">API Friends List</a> |
-          <a href="https://github.com/bsessio/Friendfinder">GitHub Repo</a>
-        </p>
-        </div>
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- <script src="server.js"></script> -->
+        <a href="/api/friends">API Friends List</a> |
+        <a href="https://github.com/bsessio/Friendfinder">GitHub Repo</a>
+      </p>
+    </div>
+
+    <!-- THE PAGE FUNCTIONALLY ENDS HERE -->
+
+    <!-- Modal from Bootstrap, with some small edits. -->
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">
+            <!-- <button type="button" class="close" data-dismiss="modal">
               &times;
-            </button>
-            <h4 class="modal-title">Your New Best Friend</h4>
+            </button> -->
+            <h4 class="modal-title" style="text-align: center">Your New Best Friend</h4>
           </div>
           <div class="modal-body">
-            <h2 id="match-name"></h2>
-            <img id="match-img" src="" alt="match image" max-width="75%" />
+            <!-- We will be putting in our matched name in here. -->
+            <h2 id="match-name" style="text-align: center"></h2>
+            <!-- We will be putting our matched image in this URL. -->
+            <img id="match-img" class="modal-image" src="" alt="match image"/>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -186,6 +212,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Yay, more scripts. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -197,38 +225,56 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Start the frustration of coding outside of our three JS files. -->
     <script type="text/javascript">
-      let iFriend = false;
-      let checkState = "";
+      // Some global variables. https://i.kym-cdn.com/photos/images/original/001/264/842/220.png
+      let iFriend = "",
+        checkState = "";
+
+      // Clickhandler for the form submission and subsequent modal launch.
       $("#survey").on("click", function(event) {
+        // We refuse to let it reload the page. That'd be bad, okay?
         event.preventDefault();
+        // If statement, in summary:
+        // If any of the values are empty strings, it won't do anything.
+        // If the fields are full, but you just submitted the form, it won't let you repeat submit / spam.
+        // NOTE FOR FUTURE DEVELOPMENT: I'd really like to run a for loop here to make sure this submission doesn't match any other submissions.
+        // If the following fields are empty strings, send an alert instead.
         if (
           $("#name").val() === "" ||
           $("#photo").val() === "" ||
           $("#zeroth").val() === "" ||
           $("#oneth").val() === "" ||
           $("#twoth").val() === "" ||
-          $("#threeth").val === "" ||
-          $("#fourth").val === "" ||
-          $("#fiveth").val === "" ||
-          $("#sixth").val === "" ||
-          $("#seventh").val === "" ||
-          $("#eightth").val === "" ||
-          $("#nineth").val === ""
+          $("#threeth").val() === "" ||
+          $("#fourth").val() === "" ||
+          $("#fiveth").val() === "" ||
+          $("#sixth").val() === "" ||
+          $("#seventh").val() === "" ||
+          $("#eightth").val() === "" ||
+          $("#nineth").val() === ""
         ) {
           alert("This form was not filled out correctly, please try again.");
+          // Else, if iFriend is not an empty string it does the following
         } else if (iFriend != "") {
+          // If the Name is the same as the last one, it fails, and alerts.
           if (checkState === $("#name").val()) {
             alert("You have already been entered into our system.");
-          } else {
+          }
+          // If the Name is not the same, goes ahead.
+          else {
             if (checkState != $("#name").val()) {
               friendAdd();
             }
           }
-        } else {
+        }
+        // Else, go ahead.
+        else {
           friendAdd();
         }
       });
+      // Function for friendAdd, which fills the iFriend variable and sends it off.
       function friendAdd() {
         iFriend = {
           friendName: $("#name")
@@ -290,14 +336,18 @@
             )
           ]
         };
-        var self = iFriend.friendName;
+        // Creates the Self name for grabbing it up later.
+        let self = iFriend.friendName;
+        // Sends the iFriend to the api/Friends path.
         $.post("/api/friends", iFriend, function(data) {
           console.log(data);
         }).then(function(data) {
+          // Hey, here's where I use Self, redefining checkState with it here.
           checkState = self;
+          // Overwrites the modal data with the matched new best friend!
           $("#match-name").text(data.friendName);
           $("#match-img").attr("src", data.photoURL);
-
+          // Reveals the modal at the end.
           $("#myModal").modal("show");
         });
       }
