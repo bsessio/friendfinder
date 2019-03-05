@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Friend Finder survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,15 +14,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
   <body>
-    <!-- <script>$(document).ready(function($) {
-            $("#div").on("click", "a", function(event) {
-              event.preventDefault();
-              jQuery.noConflict();
-              $('#myModal').modal('show');
-          
-            });
-          });</script> -->
-    <h1><i class="fas fa-person-booth"></i> Friend Finder</h1>
+    <h1 class="center"><i class="fas fa-person-booth"></i> Friend Finder</h1>
     <hr />
     <div class="blob">
       <div class="quizFields">
@@ -34,12 +27,11 @@
         <input placeholder="paste URL here" id="photo" />
       </div>
 
-      <p>How do you feel about...</p>
+      <p class="newPage">How do you feel about...</p>
       <div class="quizFields">
         <label for="zeroth">Sushi?</label>
         <select id="zeroth">
           <option value="" selected disabled hidden>Click here to choose</option
-          ><option> </option
           ><option value="1">Strongly opposed</option>
           <option value="2">Opposed</option>
           <option value="3">Indifferent</option>
@@ -49,10 +41,9 @@
       </div>
 
       <div class="quizFields">
-        <label for="oneth">Being considered a geek or nerd?</label>
+        <label for="oneth">Geekiness?</label>
         <select id="oneth">
           <option value="" selected disabled hidden>Click here to choose</option
-          ><option> </option
           ><option value="1">Strongly opposed</option>
           <option value="2">Opposed</option>
           <option value="3">Indifferent</option>
@@ -62,10 +53,9 @@
       </div>
 
       <div class="quizFields">
-        <label for="twoth">The new Star Wars movies?</label>
+        <label for="twoth">New Star Wars?</label>
         <select id="twoth">
           <option value="" selected disabled hidden>Click here to choose</option
-          ><option> </option
           ><option value="1">Strongly opposed</option>
           <option value="2">Opposed</option>
           <option value="3">Indifferent</option>
@@ -75,10 +65,9 @@
       </div>
 
       <div class="quizFields">
-        <label for="threeth">President Donald Trump?</label>
+        <label for="threeth">Donald Trump?</label>
         <select id="threeth">
           <option value="" selected disabled hidden>Click here to choose</option
-          ><option> </option
           ><option value="1">Strongly opposed</option>
           <option value="2">Opposed</option>
           <option value="3">Indifferent</option>
@@ -91,7 +80,6 @@
         <label for="fourth">Religion?</label>
         <select id="fourth">
           <option value="" selected disabled hidden>Click here to choose</option
-          ><option> </option
           ><option value="1">Strongly opposed</option>
           <option value="2">Opposed</option>
           <option value="3">Indifferent</option>
@@ -104,7 +92,6 @@
         <label for="fiveth">Dogs?</label>
         <select id="fiveth">
           <option value="" selected disabled hidden>Click here to choose</option
-          ><option> </option
           ><option value="1">Strongly opposed</option>
           <option value="2">Opposed</option>
           <option value="3">Indifferent</option>
@@ -117,7 +104,6 @@
         <label for="sixth">Cats?</label>
         <select id="sixth">
           <option value="" selected disabled hidden>Click here to choose</option
-          ><option> </option
           ><option value="1">Strongly opposed</option>
           <option value="2">Opposed</option>
           <option value="3">Indifferent</option>
@@ -127,10 +113,9 @@
       </div>
 
       <div class="quizFields">
-        <label for="seventh">Law Enforcement personnel?</label>
+        <label for="seventh">Cops?</label>
         <select id="seventh">
           <option value="" selected disabled hidden>Click here to choose</option
-          ><option> </option
           ><option value="1">Strongly opposed</option>
           <option value="2">Opposed</option>
           <option value="3">Indifferent</option>
@@ -143,7 +128,6 @@
         <label for="eightth">Dr. Who?</label>
         <select id="eightth">
           <option value="" selected disabled hidden>Click here to choose</option
-          ><option> </option
           ><option value="1">Strongly opposed</option>
           <option value="2">Opposed</option>
           <option value="3">Indifferent</option>
@@ -156,7 +140,6 @@
         <label for="nineth">Taco Bell?</label>
         <select id="nineth">
           <option value="" selected disabled hidden>Click here to choose</option
-          ><option> </option
           ><option value="1">Strongly opposed</option>
           <option value="2">Opposed</option>
           <option value="3">Indifferent</option>
@@ -165,16 +148,11 @@
         </select>
       </div>
 
-      <button
-        type="submit"
-        id="survey"
-        data-toggle="modal"
-        data-target="#myModal"
-      >
-        <h2>Submit survey</h2>
-      </button>
+      <div class="newPage"><button type="submit" id="survey" data-target="#myModal">
+        <h3>Submit survey</h3>
+      </button></div>
     </div>
-    <p>
+    <p class="center">
       <a href="/api/friends">API Friends List</a> |
       <a href="https://github.com/bsessio/Friendfinder">GitHub Repo</a>
     </p>
@@ -191,7 +169,7 @@
           </div>
           <div class="modal-body">
             <h2 id="match-name"></h2>
-            <img id ="match-img" src="match-img" alt="match image" max-width="75%" />
+            <img id="match-img" src="" alt="match image" max-width="75%" />
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -201,9 +179,7 @@
         </div>
       </div>
     </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -215,91 +191,107 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript">
-      {
-        $("#survey").on("click", function(event) {
-          event.preventDefault();
-          // console.log(friends)
-          var iFriend = {
-            friendName: $("#name")
-              .val()
-              .trim(),
-            photoURL: $("#photo")
-              .val()
-              .trim(),
-            scores: [
-              parseFloat(
-                $("#zeroth")
-                  .val()
-                  .trim()
-              ),
-              parseFloat(
-                $("#oneth")
-                  .val()
-                  .trim()
-              ),
-              parseFloat(
-                $("#twoth")
-                  .val()
-                  .trim()
-              ),
-              parseFloat(
-                $("#threeth")
-                  .val()
-                  .trim()
-              ),
-              parseFloat(
-                $("#fourth")
-                  .val()
-                  .trim()
-              ),
-              parseFloat(
-                $("#fiveth")
-                  .val()
-                  .trim()
-              ),
-              parseFloat(
-                $("#sixth")
-                  .val()
-                  .trim()
-              ),
-              parseFloat(
-                $("#seventh")
-                  .val()
-                  .trim()
-              ),
-              parseFloat(
-                $("#eightth")
-                  .val()
-                  .trim()
-              ),
-              parseFloat(
-                $("#nineth")
-                  .val()
-                  .trim()
-              )
-            ]
-          };
-          var self = iFriend.friendName;
-          $.post("/api/friends", iFriend, function(data) {
-            console.log(data);
-          })
-            // .then(function(data) {
-            //   $.get("/api/friends", function(req, res) {
-            //     return res.json(friends);
-            //   });
-            // });
-            .then(function(data) {
-              $("#match-name").text(data.friendName);
-              $("#match-img").attr("src", data.photoURL);
+      let iFriend = false;
+      let checkState = "";
+      $("#survey").on("click", function(event) {
+        event.preventDefault();
+        if (
+          $("#name").val() === "" ||
+          $("#photo").val() === "" ||
+          $("#zeroth").val() === "" ||
+          $("#oneth").val() === "" ||
+          $("#twoth").val() === "" ||
+          $("#threeth").val === "" ||
+          $("#fourth").val === "" ||
+          $("#fiveth").val === "" ||
+          $("#sixth").val === "" ||
+          $("#seventh").val === "" ||
+          $("#eightth").val === "" ||
+          $("#nineth").val === ""
+        ) {
+          alert("This form was not filled out correctly, please try again.");
+        } else if (iFriend != "") {
+          if (checkState === $("#name").val()) {
+            alert("You have already been entered into our system.");
+          } else {
+            if (checkState != $("#name").val()) {
+              friendAdd();
+            }
+          }
+        } else {
+          friendAdd();
+        }
+      });
+      function friendAdd() {
+        iFriend = {
+          friendName: $("#name")
+            .val()
+            .trim(),
+          photoURL: $("#photo")
+            .val()
+            .trim(),
+          scores: [
+            parseFloat(
+              $("#zeroth")
+                .val()
+                .trim()
+            ),
+            parseFloat(
+              $("#oneth")
+                .val()
+                .trim()
+            ),
+            parseFloat(
+              $("#twoth")
+                .val()
+                .trim()
+            ),
+            parseFloat(
+              $("#threeth")
+                .val()
+                .trim()
+            ),
+            parseFloat(
+              $("#fourth")
+                .val()
+                .trim()
+            ),
+            parseFloat(
+              $("#fiveth")
+                .val()
+                .trim()
+            ),
+            parseFloat(
+              $("#sixth")
+                .val()
+                .trim()
+            ),
+            parseFloat(
+              $("#seventh")
+                .val()
+                .trim()
+            ),
+            parseFloat(
+              $("#eightth")
+                .val()
+                .trim()
+            ),
+            parseFloat(
+              $("#nineth")
+                .val()
+                .trim()
+            )
+          ]
+        };
+        var self = iFriend.friendName;
+        $.post("/api/friends", iFriend, function(data) {
+          console.log(data);
+        }).then(function(data) {
+          checkState = self;
+          $("#match-name").text(data.friendName);
+          $("#match-img").attr("src", data.photoURL);
 
-              $("#myModal").modal("toggle");
-              // THIS ISN'T WORKING ^^^^
-
-              // use data to manipulate
-            });
-
-          // pop up modal showing name and image of matched object
-          // });
+          $("#myModal").modal("show");
         });
       }
     </script>

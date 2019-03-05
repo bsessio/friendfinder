@@ -1,3 +1,52 @@
 body {
-    background-color: gray;
+    font-size: 1.5vw
+}
+
+label {
+    display: block;
+    width: auto;
+    font-weight: bolder;
+}
+
+.quizFields {
+    display: block;
+    float: left;
+    width: 50%;
+    margin: 0 auto;
+    background-color: gainsboro;
+    padding: 0.5vw 1vw;
+    text-align: center;
+}
+
+.newPage {
+    clear: both;
+    display: block;
+    padding-top: 1vw;
+}
+
+.blob {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.center {
+    padding: 1vw;
+    text-align: center;
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
+h1 {
+    padding: 1vw 0vw;
+}
+
+input {
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    padding: 1vw;
 }
