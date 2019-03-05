@@ -1,3 +1,4 @@
+
 // Dependencies
 // =============================================================
 var express = require("express");
@@ -9,7 +10,7 @@ var friends = require("./app/data/friends");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = 3000;
+app.set('port', process.env.PORT || 3000);
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
