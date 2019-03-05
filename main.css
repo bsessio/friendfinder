@@ -1,5 +1,7 @@
 body {
-    font-size: 1.5vw
+    background-color: rgb(41, 41, 41);
+    font-size: 1.25vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 label {
@@ -22,12 +24,15 @@ label {
     clear: both;
     display: block;
     padding-top: 1vw;
+    font-weight: bolder;
 }
 
 .blob {
     width: 40%;
-    margin: 0 auto;
+    margin: 1vw auto;
     text-align: center;
+    background-color: slategray;
+    padding: 0.5vw 0.5vw;
 }
 
 .center {
@@ -49,4 +54,23 @@ input {
 
 button {
     padding: 1vw;
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: gainsboro;
+    background-color: rgb(94, 94, 94);
+}
+
+.intro {
+    background-color: gainsboro;
+    padding: 1vw;
+    margin-bottom: 1vw;
+}
+
+a {
+    color: #1400ED !important;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #55198B !important;
 }

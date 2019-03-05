@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Friend Finder survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,10 +19,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
   <body>
-    <h1 class="center"><i class="fas fa-person-booth"></i> Friend Finder</h1>
-    <hr />
     <div class="blob">
-      <div class="quizFields">
+        <h1 class="center"><i class="fas fa-person-booth"></i> Friend Finder</h1>
+        <hr />
+          <div class="quizFields">
         <label for="name">Your name:</label>
         <input placeholder="First name and Last name" id="name" />
       </div>
@@ -148,14 +153,16 @@
         </select>
       </div>
 
-      <div class="newPage"><button type="submit" id="survey" data-target="#myModal">
-        <h3>Submit survey</h3>
-      </button></div>
-    </div>
-    <p class="center">
-      <a href="/api/friends">API Friends List</a> |
-      <a href="https://github.com/bsessio/Friendfinder">GitHub Repo</a>
-    </p>
+      <div class="newPage">
+        <button type="submit" id="survey" data-target="#myModal">
+          SUBMIT SURVEY
+        </button>
+      </div>
+      <p class="center">
+          <a href="/api/friends">API Friends List</a> |
+          <a href="https://github.com/bsessio/Friendfinder">GitHub Repo</a>
+        </p>
+        </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- <script src="server.js"></script> -->
     <div id="myModal" class="modal fade" role="dialog">
