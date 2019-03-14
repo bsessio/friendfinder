@@ -5,7 +5,7 @@
 The Brooklyn 99 Friend Finder app helps you find which Brooklyn 99 member you are most likely to be good friends with, assuming raw numerical values can truly define the makeup of a friend, when the scaling is so bizarrely unprioritized.
 
 ## Instructions
-Go to the webpage at https://dashboard.heroku.com/apps/friendfinder-bws ! Click through the form, enjoy discovering this incredibly unscientific and non-binding friend search.
+Go to the webpage at https://friendfinder-bws.herokuapp.com/! Click through the form, enjoy discovering this incredibly unscientific and non-binding friend search.
 
 You'll need to fill out the form, and you won't be able to spam it.
 
